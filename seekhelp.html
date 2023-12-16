@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TREADR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+
+    <header id="header">
+        <div id="treadr">
+          <span>T</span>
+          <span>R</span>
+          <span>E</span>
+          <span>A</span>
+          <span>D</span>
+          <span>R</span>
+         </div>
+         
+       </header>
+       <nav id="navbar">
+        <ul>
+         <li><a href="index.html">Home</a></li>
+         <li><a href="facetrain.html">Face Training</a></li>
+         <li><a href="contact.html">Contact Us</a></li>
+         <li><a href="#" class="currentPage">Seek Help</a></li>
+        </ul>
+       </nav>
+
+    <div id="map" style="width: 600px; height: 450px;"></div>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+      var platform = new H.service.Platform({
+        apikey: '8vdtSNtzolmPrcabpbvSZJfIETYcyX9q9-PyjtlrGuE'
+      });
+  
+      var defaultLayers = platform.createDefaultLayers();
+  
+      var map = new H.Map(
+        document.getElementById('map'),
+        defaultLayers.vector.normal.map,
+        {
+          zoom: 13,
+          center: { lat: 0, lng: 0 }
+        }
+      );
+  
+      var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+    </script>
+  
+
+
+    <button id="find-me">Show my location</button><br />
+    <p id="status"></p>
+    <a id="map-link" target="_blank"></a>
+  
+    <script src="script.js"></script>
+
+</body>
+</html>

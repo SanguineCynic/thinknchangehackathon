@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+:root {
+    --wood: #B99470;
+    --paste: #FEFAE0;
+    --stem: #A9B388;
+    --leaf: #5F6F52;
+ }
+ 
+
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: var(--paste);
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: var(--leaf);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--paste);
+    font-size: 3em;
+   }
+   
+
+   
+
+p {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 800px;
+    font-family: Arial, sans-serif;
+    /* color: var(--leaf); */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+ 
+ #p4adults {
+    display: none;
+ }
+
+ #textContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(169, 179, 136, 0.5);
+    border-radius: 10px;
+    margin: 5vh auto;
+    max-width: 800px;
+   }
+   #textContent hr, #infoBox hr{
+    border: 2px solid grey;
+    width: 100%;
+    border-radius: 2px;
+}
+  #textContent h1{
+    font-family: "Montserrat";
+  }
+   
+ #switchButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: var(--wood);
+    color: var(--paste);
+    border: none;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+ }
+    #textContent button:hover {
+    background-color: rgb(167, 106, 14);
+    color: black;
+   }
+   #textContent button:active {
+    transform: scale(0.9);
+   }
+   #textContent button {
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+   }
+   
+
+#banner {
+    background-image: url('https://images.unsplash.com/photo-1524168948265-8f79ad8d4e33?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--paste);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+   }
+   
+#infoBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(216, 223, 113, 0.8); /* Cream-coloured background with 80% opacity */
+    border-radius: 10px; /* Rounded corners */
+    margin: 5vh auto;
+    max-width: 1200px;
+    font-family: 'Tahoma', sans-serif;
+   }
+   #infoBox p{
+    font-size: 1.2em;
+   }
+   
+   #infoBox ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+   }
+   
+   #infoBox li {
+    padding: 10px 0;
+    transition: transform 0.3s ease;
+   }
+   
+   #infoBox li::before {
+    content: "→";
+    padding-right: 10px;
+   }
+   
+   #infoBox li:hover {
+    transform: scale(1.1);
+   }
+
+#infoBox, #textContent{
+    box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+}
+
+@keyframes dance {
+    0% {transform: translateY(0);}
+    25% {transform: translateY(-10px);}
+    50% {transform: translateY(0);}
+    75% {transform: translateY(10px);}
+    100% {transform: translateY(0);}
+   }
+
+@keyframes reverseDance {
+    0% {transform: translateY(0);}
+    25% {transform: translateY(10px);}
+    50% {transform: translateY(0);}
+    75% {transform: translateY(-10px);}
+    100% {transform: translateY(0);}
+   }
+   
+
+   #treadr span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+   }
+   
+   #treadr:hover span {
+    animation: dance 1s infinite;
+   }
+
+   #treadr:hover span:nth-child(odd) {
+    animation: reverseDance 1s infinite;
+   }
+   
+
+
+   #identifyPracticeBanner {
+    background-image: url('https://images.unsplash.com/photo-1503883391826-af91d7ce0533?q=80&w=1981&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh; /* Less height than the previous banner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--paste);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+   }
+   
+#dynamicImage {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5vh;
+    width: 40%;
+    height: 40%;
+    border: 2px solid #000; /* Change the color as needed */
+   }
+   
+   #refreshButton {
+    display: block;
+    margin: 2vh auto;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    background-color: #000; /* Change the color as needed */
+    color: #fff; /* Change the color as needed */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+   }
+   
+   #refreshButton:hover {
+    background-color: #fff; /* Change the color as needed */
+    color: #000; /* Change the color as needed */
+   }
+
+   #startButton {
+    display: block;
+    margin: 2vh auto;
+    padding: 20px 40px;
+    font-size: 2em;
+    border: none;
+    background-color: #ff6347; /* Change the color as needed */
+    color: #fff; /* Change the color as needed */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    border-radius: 12px;
+   }
+   
+   #startButton:hover {
+    background-color: #ff4500; /* Change the color as needed */
+    color: #fff; /* Change the color as needed */
+    transform: scale(1.1);
+   }
+   
+   #startButton:active {
+    animation: flash 0.3s;
+   }
+   
+#webcam-container{
+    margin-top: 2vh;
+    /* background-color: red; */
+}
+/* #label-container{
+    background-color: blue;
+} */
+#label-container div{
+    font-size: 3em;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4vh;
+   }
+   
+   .formRow {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin-bottom: 10px;
+   }
+    
+   #contactForm textarea {
+    width: 500px; /* 200px (first name) + 200px (last name) + 100px (space between) */
+    height: 100px;
+    margin-bottom: 4vh;
+   }
+   
+   #contactForm input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6347; /* Change the color as needed */
+    color: #fff; /* Change the color as needed */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+   }
+   
+   #contactForm input[type="submit"]:hover {
+    background-color: #ff4500; /* Change the color as needed */
+    color: #fff; /* Change the color as needed */
+   }
+   
+   #contactForm input[type="submit"]:active {
+    animation: flash 0.3s;
+   }
+
+   #contactForm input, #contactForm textarea {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    outline: none;
+   }
+   
+   #contactForm textarea {
+    width: 500px; /* 200px (first name) + 200px (last name) + 100px (space between) */
+    height: 100px;
+   }
+   
